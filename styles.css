@@ -8,7 +8,7 @@ body, h1, p, ul, li {
 /* Basic styling */
 body {
     background-color: lightgray;
-    font-family: Arial, sans-serif;
+    font-family: 'Monaco';
     padding-top: 50px; /* equal to nav height */
 }
 
@@ -17,7 +17,9 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(179, 164, 102);
+    
+    
+    background-color: rgb(255,215,0);
     z-index: 1000;
 }
 
@@ -32,24 +34,68 @@ nav ul {
 nav a {
     color: black;
     text-decoration: none;
-    display: inline-block; /* Shrinks the div down to the size of its content */
+    display: inline-block;
     font-size: 18px;
-    margin: 0 auto; /* Centers the div and removes any default margin */
-    border-radius: auto fit-content;
+    margin: 0 auto;
     padding: 10px;
-    border-color: red;
-    border: 3px dotted #333; /* dark gray */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255,215,0);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    float: none;
+}
+
+.dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change color on hover */
+.nav-list li a:hover, .dropdown-content li a:hover {
+    background-color: #555;
+}
+
+nav button { 
+    color: black;
+    
+    background-color: rgb(255,215,0);
+    
+    border: none; 
+    padding: 10px 20px; margin-right: 10px; cursor: pointer;
+
 
 }
 
+
+
+nav button:hover { background: #555; }
+.content { padding: 20px; border: 1px solid rgb(192, 47, 47); margin-top: 20px; }
+
+
 main {
+    font-family: 'Monaco';
     padding: 100px;
     text-align: center;
 }
 
 footer {
-    background-color: rgb(179, 164, 102);
+    background-color: rgb(255,215,0);
     padding: 10px;
     bottom: 0;
     width: 100%;
@@ -68,12 +114,28 @@ h1 {
 }
 
 #graph-container {
-    width: 90%; /* Adjust width as necessary */
-    height: 500px; /* Sufficient height for displaying large graphs */
-    margin: 20px auto; /* Centering the container */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex: 0; /* Allows the container to expand to fill available space */
+    max-width: 800px; /* Maximum width constraint */
+    height: 100%;
+    max-height: auto; /* Maximum height constraint */
+    width: 100%; /* Ensures it tries to fill the space */
+    margin: 20px auto; /* Vertical margins and horizontally centered */
     padding: 15px;
-    border: 2px solid #ffffff; /* Subtle border */
-    background-color: #f9f9f9; /* Light background for the graph area */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    border: 0px solid black;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0 10px 100px rgba(0,0,0,0.1);
 }
 
+#exchangeRateChart {
+    width: 100%; /* Full width of its container */
+    height: 100%; /* Adjust to the full available height */
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid black;
+
+}

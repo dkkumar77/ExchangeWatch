@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exchange Rates Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="index.html"> <img src="home.png" alt="Home" height= "25px"> </a></li>
                 <li><a href="mission.html">Mission</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class ="dropdown"><a href="index.html">About</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Hosting</a></li>
+                        <li><a href="#">SEO</a></li>
+                    </ul></li>
+                
+                </li>
+                <li><a href="mission.html">t1</a></li>
+
+
+                <li class = "dropdown"><a href="contact.html"> <img src="contact.png" alt="Contact" height= "30px"> </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#"> Deepak Kumar</a></li>
+                        <li><a href="#">Shahbaj Singh</a></li>
+                    </ul></li>
+
             </ul>
         </nav>
     </header>
@@ -21,13 +39,13 @@
         <p>Explore the latest in currency exchange rates and trends across various currencies.</p>
         <div id="graph-container">
             <!-- Your graph will be embedded here -->
+            <canvas id="exchangeRateChart"></canvas>
         </div>
-        
-    
     </main>
+    <script src="chart.js"></script> <!-- Link to external JS file where the chart logic will reside -->
 
     <footer>
-        Deepak and Shahbaj
+        Deepak Kumar & Shahbaj Singh
         <br><br>
         <p>
         
