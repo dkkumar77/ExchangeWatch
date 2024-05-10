@@ -1,0 +1,79 @@
+/* Basic reset */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Basic styling */
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+    padding-top: 50px; /* equal to nav height */
+}
+
+nav {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(179, 164, 102);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+
+    justify-content: space-around;
+    padding: 10px 0;
+
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    display: inline-block; /* Shrinks the div down to the size of its content */
+    font-size: 18px;
+    margin: 0 auto; /* Centers the div and removes any default margin */
+    border-radius: auto fit-content;
+    padding: 10px;
+    border-color: red;
+    border: 3px dotted #333; /* dark gray */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+main {
+    padding: 100px;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(179, 164, 102);
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+#graph-container {
+    width: 90%; /* Adjust width as necessary */
+    height: 500px; /* Sufficient height for displaying large graphs */
+    margin: 20px auto; /* Centering the container */
+    padding: 15px;
+    border: 2px solid #ffffff; /* Subtle border */
+    background-color: #f9f9f9; /* Light background for the graph area */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
