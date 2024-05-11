@@ -1,57 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exchange Rates Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exchange Rates Dashboard</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- chart.js CDN -->
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html"> <img src="home.png" alt="Home" height= "25px"> </a></li>
-                <li><a href="mission.html">Mission</a></li>
-                <li class ="dropdown"><a href="index.html">About</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Hosting</a></li>
-                        <li><a href="#">SEO</a></li>
-                    </ul></li>
-                
+
+    </head>
+        
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img src="home.png" alt="Home" height="25px">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mission.html">Mission</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html">About</a>
+                        <ul class="dropdown-content">
+                            <li>
+                                <a href="#">Web Design</a>
+                            </li>
+                            <li>
+                                <a href="#">Hosting</a>
+                            </li>
+                            <li>
+                                <a href="#">SEO</a>
+                            </li>
+                        </ul>
+                    </li>
+
                 </li>
-                <li><a href="mission.html">t1</a></li>
+                <li>
+                    <a href="mission.html">t1</a>
+                </li>
 
 
-                <li class = "dropdown"><a href="contact.html"> <img src="contact.png" alt="Contact" height= "30px"> </a>
+                <li class="dropdown">
+                    <a href="contact.html">Contact</a>
                     <ul class="dropdown-content">
-                        <li><a href="#"> Deepak Kumar</a></li>
-                        <li><a href="#">Shahbaj Singh</a></li>
-                    </ul></li>
+                        <li>
+                            <a href="contact.html">Deepak</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Shahbaj</a>
+                        </li>
+                    </ul>
+                </li>
 
             </ul>
         </nav>
-    </header>
-    <main>
-        <h1>Welcome to the Exchange Rates Dashboard</h1>
-        <p>Explore the latest in currency exchange rates and trends across various currencies.</p>
-        <div id="graph-container">
-            <!-- Your graph will be embedded here -->
-            <canvas id="exchangeRateChart"></canvas>
-        </div>
-    </main>
-    <script src="chart.js"></script> <!-- Link to external JS file where the chart logic will reside -->
+    </body>
+</html></header><main>
+<h1>Welcome to the Exchange Rates Dashboard</h1>
+<p>Explore the latest in currency exchange rates and trends across various currencies.</p>
+<div id="graph-container">
 
-    <footer>
-        Deepak Kumar & Shahbaj Singh
-        <br><br>
-        <p>
-        
+    <div id="currency-converter">
 
-        </p>
+        <select id="srcCurrency">
+            <option value="USD" selected>USD</option>
+            <option value="AUD">AUD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+        </select>
+        <button id="invCurrency">⟷</button><br>
+        <select id="destCurrency">
+            
+            <option value="AUD" selected>AUD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="USD">USD</option>
+        </select>
+    </div>
 
-    </footer>
-</body>
-</html>
+
+    <!-- graph embedded here -->
+    <canvas id="exchangeRateChart" ></canvas>
+</main><script src="chart.js"></script><!-- link to external .js file where chart logic will reside --><footer></div>
+Deepak Kumar & Shahbaj Singh
+<br><br>
+    <p></p>
+
+</footer></body></html>

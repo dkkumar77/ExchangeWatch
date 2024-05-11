@@ -1,11 +1,9 @@
-/* Basic reset */
 body, h1, p, ul, li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-/* Basic styling */
 body {
     background-color: lightgray;
     font-family: 'Monaco';
@@ -17,9 +15,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    
-    
-    background-color: rgb(255,215,0);
+    background-color: rgb(0, 214, 50);
     z-index: 1000;
 }
 
@@ -38,13 +34,13 @@ nav a {
     font-size: 18px;
     margin: 0 auto;
     padding: 10px;
-    white-space: nowrap; /* Prevents text from wrapping */
+    white-space: nowrap; 
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(255,215,0);
+    background-color: rgb(0, 214, 50);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -66,7 +62,6 @@ nav a {
     display: block;
 }
 
-/* Change color on hover */
 .nav-list li a:hover, .dropdown-content li a:hover {
     background-color: #555;
 }
@@ -74,7 +69,7 @@ nav a {
 nav button { 
     color: black;
     
-    background-color: rgb(255,215,0);
+    background-color: rgb(0, 214, 50);
     
     border: none; 
     padding: 10px 20px; margin-right: 10px; cursor: pointer;
@@ -95,7 +90,7 @@ main {
 }
 
 footer {
-    background-color: rgb(255,215,0);
+    background-color: rgb(0, 214, 50);
     padding: 10px;
     bottom: 0;
     width: 100%;
@@ -114,15 +109,17 @@ h1 {
 }
 
 #graph-container {
+    
+    position: relative;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    flex: 0; /* Allows the container to expand to fill available space */
-    max-width: 800px; /* Maximum width constraint */
+    justify-content: center; 
+    align-items: center; 
+    flex: 0; 
+    max-width: 800px; 
     height: 100%;
-    max-height: auto; /* Maximum height constraint */
-    width: 100%; /* Ensures it tries to fill the space */
-    margin: 20px auto; /* Vertical margins and horizontally centered */
+    max-height: auto; 
+    width: 100%; 
+    margin: 20px auto; 
     padding: 15px;
     border: 0px solid black;
     border-radius: 25px;
@@ -130,12 +127,41 @@ h1 {
     box-shadow: 0 10px 100px rgba(0,0,0,0.1);
 }
 
+space{
+    height: 10px;
+}
+
+
 #exchangeRateChart {
-    width: 100%; /* Full width of its container */
-    height: 100%; /* Adjust to the full available height */
+    width: 100%; 
+    height: 100%;
     background-color: #ffffff;
     padding: 12px;
     border-radius: 25px;
     border: 1px solid black;
+    margin-top: 50px;
 
+}
+
+#currency-converter {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+#currency-converter select, #currency-converter button {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px (0,0,0,0.15);
 }

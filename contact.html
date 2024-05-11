@@ -6,6 +6,9 @@
     <title>Mission</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    .button {background-color: white;} /* green */
+</style>
 <body>
     <header>
         <nav>
@@ -27,6 +30,7 @@
                     <ul class="dropdown-content">
                         <li><a href="#"> Deepak Kumar</a></li>
                         <li><a href="#">Shahbaj Singh</a></li>
+                        <img src="home.png" alt="Home" height= "25px">
                     </ul></li>
                            
             </ul>
@@ -34,8 +38,27 @@
     </header>
         <main>
             <h1>Contact Info:</h1>
-            Deepak:
-            Shahbaj:
+            
+            <a href="https://www.linkedin.com/in/dkumar77/"> <img src="linkedin.png" alt="Home" height= "20px">  Deepak Kumar<br></a>
+            <a href="https://www.linkedin.com/in/shahbaj-singh-84b12a202/"> <img src="linkedin.png" alt="Home" height= "20px">  Shahbaj Singh<br></a>
+
+            <br>
+            <br>
+            <form>
+                <label for="Name">Name</label><br>
+                <input type="text" id="Name" name="Name"><br>
+                <label for="Email">Email:</label><br>
+                <input type="text" id="Email" name="Email">
+
+                <br>
+                <label for="Note" style="display: inline-block; width:300px;" >Note:</label><br>
+                <input type="text" id="Note" name="Note" style="height: 300px; width: 400px;">
+<br>
+                <button class="button button">Green</button>
+              </form> 
+
+            <br>
+           
         </main>
 </body>
 </html>
