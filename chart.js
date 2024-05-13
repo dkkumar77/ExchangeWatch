@@ -1,42 +1,110 @@
-// JSON data containing exchange rates
+// Sample JSON data containing exchange rates in new format
 const exchangeRatesData = {
-    "rates": [
-        {"time": "2024-05-08T12:00:00Z", "USD": 1.00, "AUD": 1.40, "EUR": 0.91, "INR": 74.57, "JPY": 109.25},
-        {"time": "2024-05-08T13:00:00Z", "USD": 1.00, "AUD": 1.42, "EUR": 0.92, "INR": 75.00, "JPY": 110.00},
-        {"time": "2024-05-08T14:00:00Z", "USD": 1.00, "AUD": 1.43, "EUR": 0.93, "INR": 75.50, "JPY": 110.75},
-        {"time": "2024-05-08T15:00:00Z", "USD": 1.00, "AUD": 1.44, "EUR": 0.94, "INR": 76.00, "JPY": 111.50},
-        {"time": "2024-05-08T12:00:00Z", "USD": 1.00, "AUD": 1.40, "EUR": 0.91, "INR": 74.57, "JPY": 109.25},
-        {"time": "2024-05-08T13:00:00Z", "USD": 1.00, "AUD": 1.42, "EUR": 0.92, "INR": 75.00, "JPY": 110.00},
-        {"time": "2024-05-08T14:00:00Z", "USD": 1.00, "AUD": 1.43, "EUR": 0.93, "INR": 75.50, "JPY": 110.75},
-        {"time": "2024-05-08T15:00:00Z", "USD": 1.00, "AUD": 1.44, "EUR": 0.94, "INR": 76.00, "JPY": 111.50}
-    ]
+    "0": {
+        "success": true,
+        "timestamp": 1704153599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-01",
+        "rates": {
+            "USD": 1.103769,
+            "AUD": 1.620807,
+            "CAD": 1.461887,
+            "GBP": 0.867209,
+            "INR": 91.836735,
+            "MXN": 18.727264,
+            "JPY": 155.775486
+        }
+    },
+    "1": {
+        "success": true,
+        "timestamp": 1704239999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-02",
+        "rates": {
+            "USD": 1.09414,
+            "AUD": 1.61721,
+            "CAD": 1.457684,
+            "GBP": 0.866822,
+            "INR": 91.095075,
+            "MXN": 18.638012,
+            "JPY": 155.539094
+        }
+    },
+    "2": {
+        "success": true,
+        "timestamp": 1704326399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-03",
+        "rates": {
+            "USD": 1.092657,
+            "AUD": 1.622356,
+            "CAD": 1.458517,
+            "GBP": 0.862162,
+            "INR": 91.038416,
+            "MXN": 18.591998,
+            "JPY": 156.250561
+        }
+    },
+    "3": {
+        "success": true,
+        "timestamp": 1704412799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-04",
+        "rates": {
+            "USD": 1.094685,
+            "AUD": 1.632399,
+            "CAD": 1.462012,
+            "GBP": 0.863088,
+            "INR": 91.12249,
+            "MXN": 18.635476,
+            "JPY": 158.479157
+        }
+    },
+    "4": {
+        "success": true,
+        "timestamp": 1704499199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-05",
+        "rates": {
+            "USD": 1.09547,
+            "AUD": 1.633839,
+            "CAD": 1.464917,
+            "GBP": 0.860787,
+            "INR": 91.133606,
+            "MXN": 18.491643,
+            "JPY": 158.443308
+        }
+    }
 };
 
+
+
 function updateChart() {
-    var srcCurrency = document.getElementById('srcCurrency').value;
-    var destCurrency = document.getElementById('destCurrency').value;
+    const srcCurrency = document.getElementById('srcCurrency').value;
+    const destCurrency = document.getElementById('destCurrency').value;
     
-    var exchangeRateData = exchangeRatesData.rates.map(rate => {
-        return {
-            time: rate.time,
-            value: rate[destCurrency] / rate[srcCurrency],
-            
-        };
+    const exchangeRateData = Object.values(exchangeRatesData).map(day => {
+        const date = day.date;
+        const rate = day.rates[destCurrency] / day.rates[srcCurrency];
+        return { date, value: rate };
     });
 
-    var labels = exchangeRateData.map(rate => rate.time);
-    var data = exchangeRateData.map(rate => rate.value);
+    const labels = exchangeRateData.map(data => data.date);
+    const data = exchangeRateData.map(data => data.value);
 
+    // Update chart data
     exchangeRateChart.data.labels = labels;
     exchangeRateChart.data.datasets[0].data = data;
-   
-    exchangeRateChart.data.datasets[0].borderColor = 'pink';
     exchangeRateChart.update();
 }
 
 document.getElementById('srcCurrency').addEventListener('change', updateChart);
 document.getElementById('destCurrency').addEventListener('change', updateChart);
-
 
 const ctx = document.getElementById('exchangeRateChart').getContext('2d');
 const exchangeRateChart = new Chart(ctx, {
@@ -69,10 +137,8 @@ const exchangeRateChart = new Chart(ctx, {
             xAxes: [{
                 type: 'time',
                 time: {
-                    unit: 'hour',
-                    displayFormats: {
-                        hour: 'hA'
-                    }
+                    unit: 'day',
+                    tooltipFormat: 'll'
                 },
                 ticks: {
                     padding: 5
@@ -89,4 +155,5 @@ document.getElementById('invCurrency').addEventListener('click', function() {
     updateChart();
 });
 
+// Init chart
 updateChart();

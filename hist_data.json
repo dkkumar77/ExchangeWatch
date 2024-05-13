@@ -1,0 +1,96 @@
+{
+    "success": true,
+    "timestamp": 1704153599,
+    "historical": true,
+    "base": "EUR",
+    "date": "2024-01-01",
+    "rates": {
+        "USD": 1.103769,
+        "AUD": 1.620807,
+        "CAD": 1.461887,
+        "GBP": 0.867209,
+        "INR": 91.836735,
+        "MXN": 18.727264,
+        "JPY": 155.775486
+    },
+    "0": {
+        "success": true,
+        "timestamp": 1704239999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-02",
+        "rates": {
+            "USD": 1.09414,
+            "AUD": 1.61721,
+            "CAD": 1.457684,
+            "GBP": 0.866822,
+            "INR": 91.095075,
+            "MXN": 18.638012,
+            "JPY": 155.539094
+        }
+    },
+    "1": {
+        "success": true,
+        "timestamp": 1704326399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-03",
+        "rates": {
+            "USD": 1.092657,
+            "AUD": 1.622356,
+            "CAD": 1.458517,
+            "GBP": 0.862162,
+            "INR": 91.038416,
+            "MXN": 18.591998,
+            "JPY": 156.250561
+        }
+    },
+    "2": {
+        "success": true,
+        "timestamp": 1704412799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-04",
+        "rates": {
+            "USD": 1.094685,
+            "AUD": 1.632399,
+            "CAD": 1.462012,
+            "GBP": 0.863088,
+            "INR": 91.12249,
+            "MXN": 18.635476,
+            "JPY": 158.479157
+        }
+    },
+    "3": {
+        "success": true,
+        "timestamp": 1704499199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-05",
+        "rates": {
+            "USD": 1.09547,
+            "AUD": 1.633839,
+            "CAD": 1.464917,
+            "GBP": 0.860787,
+            "INR": 91.133606,
+            "MXN": 18.491643,
+            "JPY": 158.443308
+        }
+    },
+    "4": {
+        "success": true,
+        "timestamp": 1704585599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-06",
+        "rates": {
+            "USD": 1.09547,
+            "AUD": 1.633839,
+            "CAD": 1.464917,
+            "GBP": 0.86088,
+            "INR": 91.133606,
+            "MXN": 18.491643,
+            "JPY": 158.443308
+        }
+    }
+}
