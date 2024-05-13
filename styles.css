@@ -5,7 +5,7 @@ body, h1, p, ul, li {
 }
 
 body {
-    background-color: lightgray;
+    background-color: #edece7;
     font-family: 'Monaco';
     padding-top: 50px; /* equal to nav height */
 }
@@ -87,6 +87,7 @@ main {
     font-family: 'Monaco';
     padding: 100px;
     text-align: center;
+    justify-content: center;
 }
 
 footer {
@@ -123,12 +124,13 @@ h1 {
     padding: 15px;
     border: 0px solid black;
     border-radius: 25px;
-    background-color: #f9f9f9;
-    box-shadow: 0 10px 100px rgba(0,0,0,0.1);
+    background-color: edece7;
+    box-shadow: 0 10px 100px rgba(0,0,0,0.01);
 }
 
-space{
+.space{
     height: 10px;
+    max-width: 100;
 }
 
 
@@ -138,7 +140,7 @@ space{
     background-color: #ffffff;
     padding: 12px;
     border-radius: 25px;
-    border: 1px solid black;
+    border: 0px solid black;
     margin-top: 50px;
 
 }
@@ -146,10 +148,12 @@ space{
 #currency-converter {
     position: absolute;
     top: 10px; 
-    left: 10px; 
-    background-color: rgba(255, 255, 255, 0.9); 
+    left: 15px; 
+    background-color: white; 
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 15px;
+    border-color: black;
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     gap: 5px; 
@@ -160,8 +164,8 @@ space{
     padding: 0 15px;
     font-size: 16px;
     line-height: 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0px solid #ccc;
+    border-radius: 0px;
     background-color: white;
     box-shadow: 0 2px 4px (0,0,0,0.15);
 }
