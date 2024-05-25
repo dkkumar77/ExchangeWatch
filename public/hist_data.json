@@ -1,0 +1,192 @@
+{
+    "success": true,
+    "timestamp": 1704153599,
+    "historical": true,
+    "base": "EUR",
+    "date": "2024-01-01",
+    "rates": {
+        "USD": 1.103769,
+        "AUD": 1.620807,
+        "CAD": 1.461887,
+        "GBP": 0.867209,
+        "INR": 91.836735,
+        "MXN": 18.727264,
+        "JPY": 155.775486
+    },
+    "0": {
+        "success": true,
+        "timestamp": 1704239999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-02",
+        "rates": {
+            "USD": 1.09414,
+            "AUD": 1.61721,
+            "CAD": 1.457684,
+            "GBP": 0.866822,
+            "INR": 91.095075,
+            "MXN": 18.638012,
+            "JPY": 155.539094
+        }
+    },
+    "1": {
+        "success": true,
+        "timestamp": 1704326399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-03",
+        "rates": {
+            "USD": 1.092657,
+            "AUD": 1.622356,
+            "CAD": 1.458517,
+            "GBP": 0.862162,
+            "INR": 91.038416,
+            "MXN": 18.591998,
+            "JPY": 156.250561
+        }
+    },
+    "2": {
+        "success": true,
+        "timestamp": 1704412799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-04",
+        "rates": {
+            "USD": 1.094685,
+            "AUD": 1.632399,
+            "CAD": 1.462012,
+            "GBP": 0.863088,
+            "INR": 91.12249,
+            "MXN": 18.635476,
+            "JPY": 158.479157
+        }
+    },
+    "3": {
+        "success": true,
+        "timestamp": 1704499199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-05",
+        "rates": {
+            "USD": 1.09547,
+            "AUD": 1.633839,
+            "CAD": 1.464917,
+            "GBP": 0.860787,
+            "INR": 91.133606,
+            "MXN": 18.491643,
+            "JPY": 158.443308
+        }
+    },
+    "4": {
+        "success": true,
+        "timestamp": 1704585599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-01-06",
+        "rates": {
+            "USD": 1.09547,
+            "AUD": 1.633839,
+            "CAD": 1.464917,
+            "GBP": 0.86088,
+            "INR": 91.133606,
+            "MXN": 18.491643,
+            "JPY": 158.443308
+        }
+    },
+    "5": {
+        "success": true,
+        "timestamp": 1710115199,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-03-10",
+        "rates": {
+            "USD": 1.094266,
+            "AUD": 1.65198,
+            "CAD": 1.475633,
+            "GBP": 0.851256,
+            "INR": 90.553042,
+            "MXN": 18.390029,
+            "JPY": 160.614084
+        }
+    },
+    "6": {
+        "success": true,
+        "timestamp": 1714607999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-05-01",
+        "rates": {
+            "USD": 1.071984,
+            "AUD": 1.641189,
+            "CAD": 1.471153,
+            "GBP": 0.854939,
+            "INR": 89.410564,
+            "MXN": 18.163264,
+            "JPY": 166.922902
+        }
+    },
+    "7": {
+        "success": true,
+        "timestamp": 1716179283,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-05-20",
+        "rates": {
+            "USD": 1.088025,
+            "AUD": 1.622139,
+            "CAD": 1.479926,
+            "GBP": 0.856102,
+            "INR": 90.561015,
+            "MXN": 18.060381,
+            "JPY": 169.411512
+        }
+    },
+    "8": {
+        "success": true,
+        "timestamp": 1716253624,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-05-21",
+        "rates": {
+            "USD": 1.086124,
+            "AUD": 1.627872,
+            "CAD": 1.48023,
+            "GBP": 0.854497,
+            "INR": 90.4988,
+            "MXN": 17.98153,
+            "JPY": 169.907828
+        }
+    },
+    "9": {
+        "success": true,
+        "timestamp": 1716342604,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-05-22",
+        "rates": {
+            "USD": 1.08606,
+            "AUD": 1.627715,
+            "CAD": 1.480555,
+            "GBP": 0.854023,
+            "INR": 90.478516,
+            "MXN": 18.045722,
+            "JPY": 169.746287
+        }
+    },
+    "10": {
+        "success": true,
+        "timestamp": 1716603604,
+        "historical": true,
+        "base": "EUR",
+        "date": "2024-05-25",
+        "rates": {
+            "USD": 1.085481,
+            "AUD": 1.638462,
+            "CAD": 1.484667,
+            "GBP": 0.851892,
+            "INR": 90.158711,
+            "MXN": 18.127323,
+            "JPY": 170.382598
+        }
+    }
+}

@@ -10,9 +10,11 @@ function readAccessKey($filePath) {
     }
     return null;
 }
+
 $filePath = 'secrets.txt'; 
 $accessKey = readAccessKey($filePath); 
 $symbols = 'USD,AUD,CAD,GBP,INR,MXN,JPY';
+$endpoint = date('Y-m-d'); // Use current date
 
 $ch = curl_init('http://api.exchangeratesapi.io/v1/'.$endpoint.'?access_key='.trim($accessKey).'&symbols='.$symbols);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -23,8 +25,10 @@ if (curl_errno($ch)) {
 } else {
     $data = json_decode($json, true);
     if (isset($data['success']) && $data['success']) {
-        if (file_exists('hist_data.json')) {
-            $existingData = json_decode(file_get_contents('hist_data.json'), true);
+        
+        $histDataPath = 'public/hist_data.json';
+        if (file_exists($histDataPath)) {
+            $existingData = json_decode(file_get_contents($histDataPath), true);
             if (!is_array($existingData)) {
                 $existingData = [];
             }
@@ -34,7 +38,7 @@ if (curl_errno($ch)) {
         $existingData[] = $data;
 
         $jsonData = json_encode($existingData);
-        file_put_contents('hist_data.json', $jsonData);
+        file_put_contents($histDataPath, $jsonData);
         echo "Data appended successfully to hist_data.json";
     } else {
         if (isset($data['error'])) {
